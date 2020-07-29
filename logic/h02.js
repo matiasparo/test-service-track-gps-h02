@@ -147,7 +147,7 @@ const specs = [
                         imei: str[1],
                         //checksum: h02.checksum (raw) // TODO No checksum info
                     };
-                    //voy a buscar las coordenadas segun torre de telefonia
+                    //get coordinates according to movile line
                     getGpsFromTowerData(str[4], str[5], str[8], str[9]).then((locationGPS)=>{
                         if(locationGPS.longitude){
                             result.geo = {
