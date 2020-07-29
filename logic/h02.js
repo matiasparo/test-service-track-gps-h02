@@ -84,7 +84,7 @@ const specs = [
                 };
                 callback(result);
             } else {
-                if (str[2] === 'NBR') { // viene sin señál gps con datos de la torre de telefonica mas sercana
+                if (str[2] === 'NBR') { // it comes without gps signal with data from the most near telephone tower
                     //*HQ,4109224553,NBR,223221,748,7,0,7,8311,9905,41,8311,9967,21,8311,8221,15,8311,8160,15,8311,9906,14,8311,9076,13,8311,8161,13,121118,FFFFF9FF,5#
                     datetime = str[str.length - 3].replace(/([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})/, function (s, y, m, d, h, i) {
                         return '20' + y + '-' + m + '-' + d + ' ' + h + ':' + i;
